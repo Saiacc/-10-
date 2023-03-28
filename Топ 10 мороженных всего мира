@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Топ 10 мороженного по всему миру</title>
+     <!-- Добавление значка на вкладку -->
+    <link rel="icon" href="photo_2023-03-26_22-39-02.jpg" type="image/x-icon">
+    <!-- Ссылка на шрифт Comfortaa из Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+      /* Установка стилей для тега body */
+      body {
+        background-color: #333; /* цвет фона */
+        color: #999; /* цвет текста */
+        font-family: 'Comfortaa', cursive; /* установка шрифта Comfortaa */
+      }
+      /* Установка стилей для тега h1 */
+      h1 {
+        text-align: center; /* выравнивание текста по центру */
+      }
+      /* Установка стилей для класса ice-cream-item */
+      .ice-cream-item {
+        display: flex; /* установка типа отображения flex */
+        flex-direction: column; /* установка направления flex-элементов в колонку */
+        align-items: flex-start; /* выравнивание flex-элементов по началу контейнера */
+        border: 1px solid #555; /* установка обводки */
+        border-radius: 10px; /* установка закругленных углов */
+        margin-bottom: 10px; /* установка отступа снизу */
+        padding: 10px; /* установка внутреннего отступа */
+        position: relative; /* установка позиционирования относительно родительского элемента */
+      }
+      /* Установка стилей для класса ice-cream-image */
+      .ice-cream-image {
+        width: 100px; /* установка ширины изображения */
+        height: 100px; /* установка высоты изображения */
+        margin-bottom: 10px; /* установка отступа снизу */
+      }
+      /* Установка стилей для класса ice-cream-description */
+      .ice-cream-description {
+        display: none; /* скрытие элемента */
+        opacity: 0; /* установка прозрачности элемента в 0 (невидимый) */
+        transition: opacity 0.5s; /* добавление плавного перехода прозрачности за 0.5 секунды */
+      }
+      /* Установка стилей для классов show-description-button и hide-description-button */
+      .show-description-button,
+      .hide-description-button {
+        background-color: #333; /* цвет фона кнопок */
+        border: 1px solid #222; /* обводка кнопок */
+        color: #999; /* цвет текста на кнопках */
+        font-family: 'Comfortaa', cursive; /* установка шрифта Comfortaa для кнопок */
+        opacity: 1; /* установка прозрачности элемента в 1 (видимый) */
+        transition: opacity 0.3s; /* добавление плавного перехода прозрачности за 0.3 секунды */
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 20px;
+      }
+      .hide-description-button {
+        display: none;
+      }
+    </style>
+    <script>
+    // Функция для отображения описания мороженого
+    function showDescription(id) {
+    // Получение элемента с id `description-${id}` и изменение его свойства display на 'block'
+        document.getElementById(`description-${id}`).style.display = 'block';
+        setTimeout(() => {
+          // Получение элемента с id `description-${id}` и изменение его свойства opacity на '1'
+          document.getElementById(`description-${id}`).style.opacity = '1';
+          }, 0);
+        // Получение элемента с id `show-button-${id}` и изменение его свойства opacity на '0'
+        document.getElementById(`show-button-${id}`).style.opacity = '0';
+        setTimeout(() => {
+          // Получение элемента с id `show-button-${id}` и изменение его свойства display на 'none'
+          document.getElementById(`show-button-${id}`).style.display = 'none';
+          // Получение элемента с id `hide-button-${id}` и изменение его свойства display на 'block'
+          document.getElementById(`hide-button-${id}`).style.display = 'block';
+          setTimeout(() => {
+            // Получение элемента с id `hide-button-${id}` и изменение его свойства opacity на '1'
+            document.getElementById(`hide-button-${id}`).style.opacity = '1';
+          }, 0);
+          }, 300);
+      }
+      // Функция для скрытия описания мороженого
+      function hideDescription(id) {
+        // Получение элемента с id `description-${id}` и изменение его свойства opacity на '0'
+        document.getElementById(`description-${id}`).style.opacity = '0';
+        setTimeout(() => {
+          // Получение элемента с id `description-${id}` и изменение его свойства display на 'none'
+          document.getElementById(`description-${id}`).style.display = 'none';
+        }, 500);
+        // Получение элемента с id `hide-button-${id}` и изменение его свойства opacity на '0'
+        document.getElementById(`hide-button-${id}`).style.opacity = '0';
+        setTimeout(() => {
+          // Получение элемента с id `hide-button-${id}` и изменение его свойства display на 'none'
+          document.getElementById(`hide-button-${id}`).style.display = 'none';
+          // Получение элемента с id `show-button-${id}` и изменение его свойства display на 'block'
+          document.getElementById(`show-button-${id}`).style.display = 'block';
+          setTimeout(() => {
+            // Получение элемента с id `show-button-${id}` и изменение его свойства opacity на '1'
+            document.getElementById(`show-button-${id}`).style.opacity = '1';
+          }, 0);
+        }, 300);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Топ 10 мороженного по всему миру</h1>
+    <div class="ice-cream-list">
+      <!-- Добавьте информацию обо всех видах мороженого здесь -->
+      <div class="ice-cream-item">
+        <!-- Замените текст на название мороженого -->
+        <h2>Название мороженого</h2>
+
+         <div style="display:flex; align-items:center;">
+            <!-- Замените src на ссылку на изображение мороженого -->
+            <img class="ice-cream-image" src="generated_image1.png" alt="Мороженое">
+            <!-- Замените текст на описание мороженого -->
+            <p class="ice-cream-description" id="description-1">Описание мороженого</p>
+         </div>
+
+         <button class="show-description-button" id="show-button-1" onclick="showDescription(1)">Показать описание</button>
+         <button class="hide-description-button" id="hide-button-1" onclick="hideDescription(1)">Скрыть описание
+          </button>
+      </div>
+
+      <!-- Добавьте еще 9 видов мороженого здесь -->
+      <div class="ice-cream-item">
+        <h2>Название мороженого 2</h2>
+        <div style="display:flex; align-items:center;">
+          <img class="ice-cream-image" src="generated_image2.png" alt="Мороженое 2">
+          <p class="ice-cream-description" id="description-2">Описание мороженого 2</p>
+        </div>
+        <button class="show-description-button" id="show-button-2" onclick="showDescription(2)">Показать описание</button>
+        <button class="hide-description-button" id="hide-button-2" onclick="hideDescription(2)">Скрыть описание</button>
+      </div>
+
+      <!-- Пропуск остальных видов мороженного -->
+    </div>
+  </body>
+</html>
